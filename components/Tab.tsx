@@ -1,9 +1,9 @@
-import type { ReactNode } from 'react';
+import type { ReactNode } from 'react'
 
 interface TabProps {
-  children: ReactNode;
-  title?: string;
-  id?: string;
+  children: ReactNode
+  title?: string
+  id?: string
 }
 
 export default function Tab({ children, title, id }: TabProps) {
@@ -11,5 +11,5 @@ export default function Tab({ children, title, id }: TabProps) {
     <div title={title} id={id}>
       {children}
     </div>
-  );
+  )
 }
