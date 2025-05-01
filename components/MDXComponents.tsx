@@ -12,6 +12,16 @@ import Tab from './Tab'
 
 export const components: MDXComponents = {
   Image,
+  img: (props) => {
+    if (!props.src) {
+      return <></>;
+    }
+    return (
+      <span className="flex items-center justify-center">
+        <Image src={props.src} alt={props.alt || ""} width={500} height={500} />
+      </span>
+    );
+  },
   TOCInline,
   a: CustomLink,
   pre: Pre,
