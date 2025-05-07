@@ -33,7 +33,7 @@ export default function PostMinimal({ content, next, prev, children }: LayoutPro
             </div>
             <div className="w-full">
               <Bleed>
-                <div className="relative w-full h-64 md:h-80 lg:h-96">
+                <div className="relative h-64 w-full md:h-80 lg:h-96">
                   <Image src={displayImage} alt={title} fill className="object-cover" />
                 </div>
               </Bleed>
