@@ -1,4 +1,5 @@
 const { withContentlayer } = require('next-contentlayer2')
+const path = require('path');
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
@@ -94,6 +95,11 @@ module.exports = () => {
         test: /\.svg$/,
         use: ['@svgr/webpack'],
       })
+
+      config.resolve.alias = {
+        ...(config.resolve.alias || {}),
+        '@/data': path.resolve(__dirname, 'data'),
+      };
 
       return config
     },
